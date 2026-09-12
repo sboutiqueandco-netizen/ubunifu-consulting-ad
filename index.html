@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta property="og:title" content="Ubunifu Consulting — AI-Powered Solutions for SA Businesses"/>
+<meta property="og:description" content="Branding, Web Design & AI Automation built for small businesses in KwaZulu-Natal. Book your free consultation today."/>
+<meta property="og:type" content="website"/>
+<title>Ubunifu Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    min-height: 100%;
+    background: #050508;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .ad {
+    width: 100%;
+    max-width: 480px;
+    background: #0a0a0a;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 0.5px solid rgba(0,196,244,0.18);
+    box-shadow: 0 0 60px rgba(120,0,255,0.12), 0 0 120px rgba(0,196,244,0.06);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    height: 300px;
+    background: radial-gradient(ellipse at 50% 20%, #1e0a4a 0%, #080810 70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 28px;
+    overflow: hidden;
+  }
+
+  .glow-top {
+    position: absolute; top: -60px; left: 50%;
+    transform: translateX(-50%);
+    width: 380px; height: 240px;
+    background: radial-gradient(ellipse, rgba(100,0,255,0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .glow-bottom {
+    position: absolute; bottom: -20px; left: 50%;
+    transform: translateX(-50%);
+    width: 300px; height: 140px;
+    background: radial-gradient(ellipse, rgba(0,180,255,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .logo-row {
+    position: relative; z-index: 2;
+    display: flex; align-items: center; gap: 11px;
+    margin-bottom: 20px;
+  }
+
+  .logo-name { font-family: 'Orbitron', monospace; font-size: 18px; font-weight: 900; color: #00c4f4; letter-spacing: 2.5px; text-shadow: 0 0 20px rgba(0,196,244,0.55); }
+  .logo-consulting { font-size: 9px; font-weight: 600; color: rgba(138,184,208,0.75); letter-spacing: 4.5px; text-transform: uppercase; margin-top: 4px; }
+
+  .hero-svg { position: relative; z-index: 2; width: 270px; }
+
+  /* ── BODY ── */
+  .body { padding: 30px 26px 0; }
+
+  .headline {
+    font-size: 27px; font-weight: 800; color: #fff;
+    text-align: center; line-height: 1.18;
+    text-transform: uppercase; letter-spacing: -0.4px;
+    margin-bottom: 9px;
+  }
+
+  .subhead {
+    font-size: 14px; font-weight: 500; color: #9b5dff;
+    text-align: center; margin-bottom: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  .features { display: flex; flex-direction: column; gap: 11px; margin-bottom: 28px; }
+
+  .feature {
+    display: flex; align-items: center; gap: 11px;
+    font-size: 14px; color: #d0d0d0; font-weight: 500;
+  }
+
+  .check { flex-shrink: 0; }
+
+  .pill {
+    display: block; width: fit-content; margin: 0 auto 24px;
+    background: rgba(120,0,255,0.2);
+    border: 1px solid rgba(120,0,255,0.55);
+    color: #c084ff; font-size: 13px; font-weight: 600;
+    letter-spacing: 0.4px; padding: 8px 26px; border-radius: 24px;
+  }
+
+  .preview {
+    background: #111; border-radius: 12px; padding: 14px 16px;
+    display: flex; align-items: center; gap: 14px;
+    border: 0.5px solid rgba(255,255,255,0.06);
+  }
+
+  .thumb {
+    width: 62px; height: 62px; border-radius: 8px; flex-shrink: 0;
+    background: linear-gradient(135deg, #1a0a3e, #061230);
+    border: 0.5px solid rgba(0,196,244,0.3);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .preview-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .preview-sub { font-size: 12px; color: rgba(255,255,255,0.4); }
+
+  /* ── CTA BUTTON ── */
+  .cta {
+    display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(90deg, #075e2e, #25d366);
+    color: #fff;
+    font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 700;
+    padding: 20px 24px; border: none; cursor: pointer; width: 100%;
+    text-decoration: none; letter-spacing: 0.1px;
+    transition: filter 0.15s;
+    margin-top: 0;
+  }
+
+  .cta:hover { filter: brightness(1.08); }
+
+  .cta-left { display: flex; align-items: center; gap: 12px; }
+
+  .wa-icon { width: 26px; height: 26px; flex-shrink: 0; }
+
+  .arrow { font-size: 22px; font-weight: 300; }
+
+  /* ── SENDER ── */
+  .sender {
+    background: #0a0a0a; padding: 14px 18px 18px;
+    display: flex; align-items: center; gap: 12px;
+    border-top: 0.5px solid rgba(255,255,255,0.05);
+  }
+
+  .avatar {
+    width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(135deg, #061230, #0d1a3a);
+    border: 1px solid rgba(0,196,244,0.3);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .sender-name { font-size: 14px; font-weight: 600; color: #fff; }
+  .sender-sub { font-size: 11px; color: rgba(255,255,255,0.38); margin-top: 2px; }
+  .ad-tag { margin-left: auto; font-size: 11px; color: rgba(255,255,255,0.3); font-weight: 500; border: 0.5px solid rgba(255,255,255,0.15); padding: 2px 8px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<div class="ad">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="glow-top"></div>
+    <div class="glow-bottom"></div>
+
+    <!-- Logo -->
+    <div class="logo-row">
+      <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+        <circle cx="23" cy="23" r="22" stroke="rgba(0,196,244,0.35)" stroke-width="0.8"/>
+        <path d="M16 12 L16 27 Q16 35 23 35 Q30 35 30 27 L30 12" stroke="#00c4f4" stroke-width="2.3" fill="none" stroke-linecap="round"/>
+        <circle cx="16" cy="12" r="2.2" fill="#00c4f4"/>
+        <circle cx="30" cy="12" r="2.2" fill="#00c4f4"/>
+        <line x1="16" y1="18" x2="10" y2="18" stroke="rgba(0,196,244,0.7)" stroke-width="1.1"/>
+        <circle cx="9.3" cy="18" r="1.4" fill="rgba(0,196,244,0.7)"/>
+        <line x1="16" y1="25" x2="10" y2="25" stroke="rgba(0,196,244,0.5)" stroke-width="1.1"/>
+        <circle cx="9.3" cy="25" r="1.4" fill="rgba(0,196,244,0.5)"/>
+        <line x1="30" y1="18" x2="36" y2="18" stroke="rgba(0,196,244,0.7)" stroke-width="1.1"/>
+        <circle cx="36.7" cy="18" r="1.4" fill="rgba(0,196,244,0.7)"/>
+        <line x1="30" y1="25" x2="36" y2="25" stroke="rgba(0,196,244,0.5)" stroke-width="1.1"/>
+        <circle cx="36.7" cy="25" r="1.4" fill="rgba(0,196,244,0.5)"/>
+        <line x1="20" y1="12" x2="20" y2="6.5" stroke="rgba(0,196,244,0.6)" stroke-width="1.1"/>
+        <circle cx="20" cy="5.8" r="1.4" fill="rgba(0,196,244,0.6)"/>
+        <line x1="26" y1="12" x2="26" y2="6.5" stroke="rgba(0,196,244,0.6)" stroke-width="1.1"/>
+        <circle cx="26" cy="5.8" r="1.4" fill="rgba(0,196,244,0.6)"/>
+        <ellipse cx="23" cy="23" rx="19" ry="6.5" stroke="#00c4f4" stroke-width="1.5" fill="none" opacity="0.45" stroke-dasharray="3 2.5"/>
+      </svg>
+      <div>
+        <div class="logo-name">UBUNIFU</div>
+        <div class="logo-consulting">Consulting</div>
+      </div>
+    </div>
+
+    <!-- Device visual -->
+    <svg class="hero-svg" viewBox="0 0 270 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="135" cy="182" rx="108" ry="12" fill="rgba(100,0,255,0.3)"/>
+      <path d="M38 167 L232 167 L252 182 L18 182 Z" fill="#160028" stroke="rgba(120,0,255,0.45)" stroke-width="0.5"/>
+      <path d="M18 182 L252 182 L252 187 L18 187 Z" fill="#0e001a"/>
+      <line x1="18" y1="182" x2="252" y2="182" stroke="#8b3dff" stroke-width="1" opacity="0.6"/>
+      <!-- laptop -->
+      <rect x="52" y="78" width="155" height="102" rx="6" fill="#0c0c1a" stroke="rgba(0,196,244,0.38)" stroke-width="1"/>
+      <rect x="57" y="83" width="145" height="89" rx="3" fill="#090918"/>
+      <rect x="60" y="86" width="139" height="11" rx="2" fill="#111128"/>
+      <text x="64" y="94.5" font-size="5" fill="rgba(0,196,244,0.85)" font-family="Inter,sans-serif">AI Dashboard</text>
+      <rect x="183" y="87" width="13" height="8" rx="1" fill="rgba(0,196,244,0.12)"/>
+      <text x="185" y="93.5" font-size="4.5" fill="#00c4f4" font-family="Inter,sans-serif">LIVE</text>
+      <rect x="60" y="100" width="43" height="23" rx="2" fill="#0e1026"/>
+      <text x="64" y="108" font-size="4" fill="rgba(255,255,255,0.38)" font-family="Inter,sans-serif">Clients</text>
+      <text x="64" y="117.5" font-size="7" fill="#ffffff" font-weight="700" font-family="Inter,sans-serif">142</text>
+      <rect x="106" y="100" width="43" height="23" rx="2" fill="#0e1026"/>
+      <text x="110" y="108" font-size="4" fill="rgba(255,255,255,0.38)" font-family="Inter,sans-serif">Revenue</text>
+      <text x="110" y="117.5" font-size="7" fill="#00c4f4" font-weight="700" font-family="Inter,sans-serif">R48k</text>
+      <rect x="152" y="100" width="43" height="23" rx="2" fill="#0e1026"/>
+      <text x="156" y="108" font-size="3.8" fill="rgba(255,255,255,0.38)" font-family="Inter,sans-serif">Automations</text>
+      <text x="156" y="117.5" font-size="7" fill="#9b5dff" font-weight="700" font-family="Inter,sans-serif">27</text>
+      <rect x="60" y="127" width="135" height="41" rx="2" fill="#0b0b20"/>
+      <rect x="65" y="148" width="9" height="16" rx="1" fill="rgba(0,196,244,0.28)"/>
+      <rect x="78" y="140" width="9" height="24" rx="1" fill="rgba(0,196,244,0.48)"/>
+      <rect x="91" y="134" width="9" height="30" rx="1" fill="rgba(0,196,244,0.68)"/>
+      <rect x="104" y="141" width="9" height="23" rx="1" fill="rgba(155,93,255,0.55)"/>
+      <rect x="117" y="132" width="9" height="32" rx="1" fill="#00c4f4"/>
+      <rect x="130" y="136" width="9" height="28" rx="1" fill="rgba(0,196,244,0.68)"/>
+      <rect x="143" y="130" width="9" height="34" rx="1" fill="#9b5dff"/>
+      <rect x="156" y="134" width="9" height="30" rx="1" fill="rgba(0,196,244,0.48)"/>
+      <rect x="169" y="140" width="9" height="24" rx="1" fill="rgba(155,93,255,0.38)"/>
+      <path d="M38 169 L232 169 L227 166 L43 166 Z" fill="#131313" stroke="rgba(0,196,244,0.18)" stroke-width="0.5"/>
+      <!-- phone -->
+      <rect x="191" y="92" width="60" height="102" rx="7" fill="#0c0c1a" stroke="rgba(155,93,255,0.45)" stroke-width="1"/>
+      <rect x="195" y="99" width="52" height="87" rx="4" fill="#090918"/>
+      <rect x="212" y="94" width="17" height="3" rx="1.5" fill="#181828"/>
+      <text x="198" y="109" font-size="4.5" fill="rgba(255,255,255,0.45)" font-family="Inter,sans-serif">Automation</text>
+      <rect x="197" y="112" width="48" height="27" rx="2" fill="#0e1026"/>
+      <circle cx="209" cy="121" r="7" fill="none" stroke="#00c4f4" stroke-width="1.4" stroke-dasharray="3 2"/>
+      <text x="206" y="124" font-size="5" fill="#00c4f4" font-family="Inter,sans-serif">AI</text>
+      <text x="221" y="118" font-size="3.8" fill="rgba(255,255,255,0.38)" font-family="Inter,sans-serif">Tasks</text>
+      <text x="221" y="126" font-size="6.5" fill="#9b5dff" font-weight="700" font-family="Inter,sans-serif">12</text>
+      <text x="221" y="133" font-size="3.5" fill="rgba(0,196,244,0.65)" font-family="Inter,sans-serif">running</text>
+      <rect x="197" y="144" width="48" height="4" rx="2" fill="#9b5dff" opacity="0.45"/>
+      <rect x="197" y="151" width="34" height="3.5" rx="1.8" fill="rgba(255,255,255,0.07)"/>
+      <rect x="197" y="157" width="42" height="3.5" rx="1.8" fill="rgba(255,255,255,0.07)"/>
+      <rect x="197" y="163" width="27" height="3.5" rx="1.8" fill="rgba(255,255,255,0.07)"/>
+      <rect x="197" y="170" width="48" height="11" rx="3" fill="rgba(155,93,255,0.25)" stroke="rgba(155,93,255,0.45)" stroke-width="0.5"/>
+      <text x="212" y="178" font-size="4.5" fill="#c084ff" font-family="Inter,sans-serif">View All</text>
+      <!-- shield -->
+      <path d="M123 143 L135 138 L147 143 L147 156 Q147 163 135 168 Q123 163 123 156 Z" fill="rgba(0,196,244,0.12)" stroke="#00c4f4" stroke-width="1.4"/>
+      <path d="M131 151 L134 154 L140 147" stroke="#00c4f4" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+    <div class="headline">Run Your Business,<br>Not Your Bottlenecks</div>
+    <div class="subhead">AI-Powered Solutions for Small Businesses in SA</div>
+
+    <div class="features">
+      <div class="feature">
+        <svg class="check" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="8.5" stroke="#9b5dff" stroke-width="1"/>
+          <path d="M5.5 9 L7.5 11 L12.5 6.5" stroke="#9b5dff" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+        Branding, Web &amp; Social Media Design
+      </div>
+      <div class="feature">
+        <svg class="check" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="8.5" stroke="#9b5dff" stroke-width="1"/>
+          <path d="M5.5 9 L7.5 11 L12.5 6.5" stroke="#9b5dff" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+        AI Automation &amp; Business Efficiency
+      </div>
+      <div class="feature">
+        <svg class="check" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="8.5" stroke="#9b5dff" stroke-width="1"/>
+          <path d="M5.5 9 L7.5 11 L12.5 6.5" stroke="#9b5dff" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+        Affordable Packages Built for SA SMEs
+      </div>
+    </div>
+
+    <div class="pill">Get Started Today →</div>
+
+    <div class="preview">
+      <div class="thumb">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <path d="M11 8 L11 21 Q11 27 18 27 Q25 27 25 21 L25 8" stroke="#00c4f4" stroke-width="1.9" fill="none" stroke-linecap="round"/>
+          <ellipse cx="18" cy="18" rx="13" ry="4.5" stroke="#00c4f4" stroke-width="1.1" fill="none" opacity="0.45" stroke-dasharray="2.5 2"/>
+        </svg>
+      </div>
+      <div>
+        <div class="preview-title">Book Your Free Consultation!</div>
+        <div class="preview-sub">Chat directly with Ubunifu Consulting</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <a class="cta" href="https://wa.me/27691241226?text=Hi%20Ubunifu%20Consulting%2C%20I%27d%20like%20to%20book%20a%20free%20consultation!" target="_blank" rel="noopener noreferrer">
+    <div class="cta-left">
+      <svg class="wa-icon" viewBox="0 0 24 24" fill="white">
+        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.979-1.404A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.274-1.234l-.306-.183-3.168.893.85-3.087-.2-.318A8 8 0 1112 20zm4.406-5.884c-.241-.121-1.426-.703-1.647-.783-.22-.08-.38-.12-.54.121-.16.241-.62.783-.76.943-.14.16-.28.18-.521.06-.24-.12-1.016-.374-1.935-1.193-.715-.638-1.198-1.426-1.338-1.667-.14-.241-.015-.371.105-.491.109-.108.24-.281.361-.422.12-.14.16-.241.24-.4.08-.162.04-.302-.02-.423-.06-.12-.54-1.302-.74-1.783-.195-.468-.393-.404-.54-.412l-.46-.008a.882.882 0 00-.64.3c-.22.241-.84.822-.84 2.003 0 1.182.86 2.323.98 2.483.12.16 1.693 2.585 4.103 3.625.574.248 1.021.396 1.37.507.576.183 1.1.157 1.514.095.462-.068 1.426-.583 1.626-1.146.201-.562.201-1.044.141-1.145-.06-.1-.22-.16-.46-.281z"/>
+      </svg>
+      WhatsApp Us Now
+    </div>
+    <span class="arrow">›</span>
+  </a>
+
+  <!-- Sender -->
+  <div class="sender">
+    <div class="avatar">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M7 6 L7 14 Q7 18 11 18 Q15 18 15 14 L15 6" stroke="#00c4f4" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+        <ellipse cx="11" cy="11" rx="9" ry="3.5" stroke="#00c4f4" stroke-width="1" fill="none" opacity="0.45" stroke-dasharray="2 1.5"/>
+      </svg>
+    </div>
+    <div>
+      <div class="sender-name">Ubunifu Consulting</div>
+      <div class="sender-sub">KwaZulu-Natal, South Africa</div>
+    </div>
+    <div class="ad-tag">Ad</div>
+  </div>
+
+</div>
+
+</body>
+</html>
